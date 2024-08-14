@@ -1,6 +1,6 @@
 services:
   mysql:
-    image: mysql:8.4
+    image: mysql:8.0
     ports:
       - "3306:3306"
     environment:
@@ -13,6 +13,7 @@ services:
       - "./conf.d:/etc/mysql/conf.d:ro"
     profiles:
       - mysql
+
   postgres:
     image: postgres:16.3
     ports:
@@ -23,3 +24,4 @@ services:
       - POSTGRES_DB=petclinic
     profiles:
       - postgres
+
